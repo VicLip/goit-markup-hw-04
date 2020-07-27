@@ -125,7 +125,7 @@ img {
 
 .navigation-list-link {
   padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
 }
 
 .header-address:not(:last-child) {
@@ -175,11 +175,19 @@ img {
   color: var(--primary-text-color);
 }
 
-/* ПОРТФОЛИО */
+.link.current::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  /* margin-right: auto;
+  margin-left: auto; */
+  border-radius: 2px;
+  margin-top: 28px;
+}
 
-/* .portfolio-header {
-  margin-bottom: 66px;
-} */
+/* ПОРТФОЛИО */
 
 .portfolio-nav {
   padding-top: 93px;
@@ -204,6 +212,14 @@ img {
   margin-right: 8px;
 }
 
+.nav-btn-list .nav-btn:hover,
+.nav-btn-list .nav-btn:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
 .portfolio-nav-buttons {
   display: flex;
   justify-content: center;
@@ -219,11 +235,6 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   background: var(--secondary-text-color);
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   width: calc((100% - 60px) / 3);
@@ -237,12 +248,20 @@ img {
   margin-bottom: 0px;
 }
 
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
 .card-content {
   background: var(--secondary-text-color);
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
 }
 
 .portfolio-title {
@@ -281,7 +300,19 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   /* временный background */
-  background: var(--background);
+  /* background: var(--background);
+  display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/header/header-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--logo-text-color);
+  max-width: 1600px;
 }
 
 .hero-title {
