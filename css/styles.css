@@ -95,10 +95,6 @@ img {
 
 /*  ШАПКА САЙТА */
 
-.header {
-  border: 1px solid #ececec;
-}
-
 .header .container {
   display: flex;
   align-items: center;
@@ -188,6 +184,9 @@ img {
 }
 
 /* ПОРТФОЛИО */
+.portfolio-header {
+  border: 1px solid #ececec;
+}
 
 .portfolio-nav {
   padding-top: 93px;
