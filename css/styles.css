@@ -41,7 +41,7 @@ html {
   --logo-text-color: #000000;
   --secondary-text-color: #ffffff;
   --background: #f5f4fa;
-  --social-links-color: #afb1b8;
+  --social-icon-color: #afb1b8;
 }
 
 body {
@@ -511,11 +511,11 @@ a {
 }
 
 .card-social-list-link:hover .icon-svg {
-  fill: #ffffff;
+  fill: var(--secondary-text-color);
 }
 
 .icon-svg {
-  fill: var(--social-links-color);
+  fill: var(--social-icon-color);
 }
 
 /* .icon-svg:hover {
@@ -557,7 +557,15 @@ a {
   display: flex;
 }
 
-.client-list-item {
+.client-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-list-item-link {
+  fill: var(--social-icon-color);
+}
+
+.client-list-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -568,13 +576,10 @@ a {
   border-radius: 4px;
 }
 
-.client-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.client-list-item:hover,
-.client-list-item:focus {
-  color: var(--accent-color);
+.client-list-item-link:hover,
+.client-list-item-link:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /*не понимаю почему не работают ховер и фокус для клиентов*/
@@ -656,12 +661,22 @@ a {
   margin-right: 85px;
 }
 
-.footer-social-links:not(:last-child) {
+.footer-links-list li:not(:last-child) {
   margin-right: 10px;
-  /* background: rgba(255, 255, 255, 0.1); */
+}
+
+.footer-social-links {
+  display: flex;
+  width: 44px;
+  min-height: 44px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  fill: var(--secondary-text-color);
 }
 
 .footer-social-links:hover,
 .footer-social-links:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
 }
