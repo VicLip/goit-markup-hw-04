@@ -30,6 +30,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -39,6 +41,7 @@ html {
   --logo-text-color: #000000;
   --secondary-text-color: #ffffff;
   --background: #f5f4fa;
+  --social-links-color: #afb1b8;
 }
 
 body {
@@ -63,6 +66,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .link {
@@ -101,7 +108,7 @@ img {
   justify-content: space-between;
 }
 
-.header-utils {
+.header-address {
   display: flex;
   margin-left: auto;
 }
@@ -124,7 +131,43 @@ img {
   /* padding-bottom: 32px; */
 }
 
-.header-address:not(:last-child) {
+.header-address-list a {
+  display: flex;
+  color: var(--primary-text-color);
+  padding-top: 32px;
+  padding-bottom: 25px;
+  align-items: center;
+}
+
+.header-address-list a:hover,
+.header-address-list a:focus,
+.header-address-list:hover .header-icon-envelope,
+.header-address-list:focus .header-icon-envelope,
+.header-address-list:hover .header-icon-phone,
+.header-address-list:focus .header-icon-phone {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.header-icon-envelope {
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  fill: var(--primary-text-color);
+}
+
+.header-icon-phone {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  fill: var(--primary-text-color);
+}
+
+.header-address-list:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -157,9 +200,7 @@ img {
 }
 
 .navigation-list-link:hover,
-.navigation-list-link:focus,
-.header-address:hover,
-.header-address:focus {
+.navigation-list-link:focus {
   color: var(--accent-color);
 }
 
@@ -345,6 +386,23 @@ img {
 }
 
 /* О НАС */
+
+.about-us-bg {
+  display: flex;
+  background: var(--background);
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.about-us-svg {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
 .about-work-list {
   display: flex;
 }
@@ -402,6 +460,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* НАША КОМАНДА */
@@ -438,12 +497,30 @@ img {
   margin-right: 10px;
 }
 
-/* 
-Ховер и фокус для социальных иконок "НАШЕЙ КОМАНДЫ"
+.card-social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+}
 
-.social-links-item:hover,
-.social-links-item:focus {
-  color: var(--accent-color);
+.card-social-list-link:hover {
+  background-color: var(--accent-color);
+}
+
+.card-social-list-link:hover .icon-svg {
+  fill: #ffffff;
+}
+
+.icon-svg {
+  fill: var(--social-links-color);
+}
+
+/* .icon-svg:hover {
+  fill: var(--primary-text-color);
+  background-color: var(--secondary-text-color);
 } */
 
 .team-subtitle {

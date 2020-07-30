@@ -42,24 +42,35 @@
             </li>
           </ul>
         </nav>
-        <div class="header-utils">
-          <img
-            class="header-address-link"
-            src="./images/header/envelope.svg"
-            alt="конверт"
-          />
-          <a class="header-address link" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-          <img
-            class="header-address-link"
-            src="./images/header/smartphone.svg"
-            alt="смартфон"
-          />
-          <a class="header-address link" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </div>
+        <ul class="header-address">
+          <li class="header-address-list link">
+            <!-- <img
+                    class="header-address-link"
+                    src="./images/header/envelope.svg"
+                    alt="конверт"
+                  /> -->
+
+            <a href="mailto:info@devstudio.com">
+              <svg class="header-icon-envelope">
+                <use href="./images/sprite.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="header-address-list link">
+            <!-- <img
+                    class="header-address-link"
+                    src="./images/header/smartphone.svg"
+                    alt="смартфон"
+                  /> -->
+            <a href="tel:+380961111111">
+              <svg class="header-icon-phone">
+                <use href="./images/sprite.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <!--НАВИГАЦИЯ ПОРТФОЛИО-->
